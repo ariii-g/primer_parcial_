@@ -77,13 +77,13 @@ void mostrarResultado(Point puntos[], int indiceMasCercano, double distancia)
 
 int main()
 {
-    <tipo> n;
+    int n;
 
     std::cout << "Ingrese el número de puntos (mínimo 2): ";
     // Leer el número de puntos
-    std::<funcion> >> n;
+    std::cin >> n;
 
-    if ()
+    if (n < 2)
     {
         std::cout << "Se necesitan al menos 2 puntos para calcular las distancias.\n";
         return 1;
@@ -92,18 +92,18 @@ int main()
     Point puntos[n]; // Arreglo de estructuras para almacenar las coordenadas (x, y)
 
     // Leer los puntos (manual o predeterminado)
-    leerPuntos(<completar argumentos>);
+    leerPuntos(puntos, n);
 
     // Ingresar el punto del usuario
     Point pUsuario;
     std::cout << "Ingrese las coordenadas del punto desde el que calcular la distancia (x, y): ";
-    std::cin >> pUsuario.>> pUsuario.;
+    std::cin >> pUsuario.x >> pUsuario.y;
 
     // Calcular la distancia más cercana
 
-    <type> indiceMasCercano;
+    int indiceMasCercano;
     // Mostrar el resultado
-    mostrarResultado(puntos, <variable>, distancia);
+    mostrarResultado(puntos, indiceMasCercano, calcularDistanciaMasCercana(puntos, n, pUsuario, indiceMasCercano));
 
     return 0;
 }
