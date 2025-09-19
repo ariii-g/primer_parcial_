@@ -51,7 +51,17 @@ void leerPuntos(Point puntos[], int n)
 // Función para calcular la distancia más cercana desde un punto específico
 double calcularDistanciaMasCercana(Point puntos[], int n, const Point &pUsuario, int &indiceMasCercano)
 {
-
+    double distanciaMinima = calcularDistancia(puntos[0], pUsuario);
+    indiceMasCercano = 0;
+    for (int i = 1; i < n; ++i)
+    {
+        double dis = calcularDistancia(puntos[i], pUsuario);
+        if (dis < distanciaMinima)
+        {
+            distanciaMinima = dis;
+            indiceMasCercano = i;
+        }
+    }
     return distanciaMinima;
 }
 /*BONO:
