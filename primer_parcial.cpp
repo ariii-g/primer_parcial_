@@ -10,7 +10,7 @@ struct Point
 // Función para calcular la distancia entre dos puntos
 /*Como puede modificar la declaración de la función para que sea mas eficiente en el manejo de memoria?
 Teniendo en cuenta que solo necesita leer los valores, pero no modificarlos*/
-double calcularDistancia(const Point p1, const Point p2)
+double calcularDistancia(const Point &p1, const Point &p2)
 {
     // Completar: Usar la fórmula de distancia euclidiana
     // sugerencia: puede hacer uso de funcionines como sqrt y pow
@@ -23,15 +23,18 @@ void leerPuntos(Point puntos[], int n)
     char respuesta;
     std::cout << "¿Desea ingresar los puntos manualmente? (s/n): ";
     // Leer la respuesta del usuario
+    std::cin >> respuesta;
 
     // Completar: Verificar si la respuesta es 's' o 'n', tener en cuenta mayúsculas y minúsculas
-    if (respuesta == <valor a comparar><Operador logico> respuesta == <valor a comparar>)
+    if (respuesta == 's' || respuesta == 'S')
     {
+        std::cout << "Ingrese las coordenadas de los puntos:\n";
+        
         // Completar: Leer las coordenadas de cada punto
-        for ()
+        for (int i = 0; i < n; ++i)
         {
             std::cout << "Ingrese las coordenadas del punto " << i + 1 << " (x, y): ";
-            std::cin >> puntos[].>> puntos;
+            std::cin >> puntos[i].x>> puntos[i].y;
         }
     }
     else
