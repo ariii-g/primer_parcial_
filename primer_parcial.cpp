@@ -10,11 +10,11 @@ struct Point
 // Función para calcular la distancia entre dos puntos
 /*Como puede modificar la declaración de la función para que sea mas eficiente en el manejo de memoria?
 Teniendo en cuenta que solo necesita leer los valores, pero no modificarlos*/
-double calcularDistancia(Point p1, Point p2)
+double calcularDistancia(const Point p1, const Point p2)
 {
     // Completar: Usar la fórmula de distancia euclidiana
     // sugerencia: puede hacer uso de funcionines como sqrt y pow
-    return;
+    return sqrt(pow(p2.x - p1.x, 2) + pow(p2.y - p1.y, 2));;
 }
 
 // Función para leer las coordenadas de varios puntos
